@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @Then("I don't see {} icon")
-  void implementation() async {}
+  void definition() async {}
 }
 
 /// Example: Then I don't see {Icons.add} icon

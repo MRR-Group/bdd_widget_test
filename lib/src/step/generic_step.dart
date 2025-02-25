@@ -25,9 +25,9 @@ class GenericStep implements BddStep {
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @Then('$rawLine')
-  void implementation() async {}
+  void definition() async {}
 }
 
 /// Usage: $rawLine

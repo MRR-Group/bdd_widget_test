@@ -6,9 +6,9 @@ class ISeeExactlyWidgets implements BddStep {
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @Then("I see exactly {} {} widgets")
-  void implementation() async {}
+  void definition() async {}
 }
 
 /// Example: Then I see exactly {4} {SomeWidget} widgets

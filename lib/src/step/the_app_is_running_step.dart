@@ -10,9 +10,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:$package/main.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @Then('The app is running')
-  void implementation() async {}
+  void definition() async {}
 }
 
 Future<void> theAppIsRunning(WidgetTester tester) async {

@@ -6,9 +6,9 @@ class ISeeMultipleTexts implements BddStep {
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @When("I see multiple {} texts")
-  void implementation() async {}
+  void definition() async {}
 }
 
 /// Example: When I see multiple {'text'} texts

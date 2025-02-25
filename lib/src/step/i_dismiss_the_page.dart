@@ -6,9 +6,9 @@ class IDismissThePage implements BddStep {
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @Then('I dismiss the page')
-  void implementation() async {}
+  void definition() async {}
 }
 
 /// Example: Then I dismiss the page

@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @When("I enter {} into {} input field")
-  void implementation() async {}
+  void definition() async {}
 }
 
 /// Example: When I enter {'text'} into {1} input field

@@ -7,9 +7,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @When("I tap {} icon")
-  void implementation() async {}
+  void definition() async {}
 }
 
 /// Example: When I tap {Icons.add} icon

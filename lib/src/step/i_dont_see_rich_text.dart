@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
-class StepDefs {
+class StepDefinition {
   @When("I don't see {} rich text")
-  void implementation() async {}
+  void definition() async {}
 }
 
 /// Example: When I don't see {'text'} rich text
