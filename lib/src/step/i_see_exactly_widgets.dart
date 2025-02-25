@@ -4,6 +4,12 @@ class ISeeExactlyWidgets implements BddStep {
   @override
   String get content => '''
 import 'package:flutter_test/flutter_test.dart';
+import 'package:bdd_widget_test/defs.dart';
+
+class StepDefs {
+  @Then("I see exactly {} {} widgets")
+  void implementation() async {}
+}
 
 /// Example: Then I see exactly {4} {SomeWidget} widgets
 Future<void> iSeeExactlyWidgets(

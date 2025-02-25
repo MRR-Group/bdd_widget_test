@@ -5,6 +5,12 @@ class ISeeRichText implements BddStep {
   String get content => '''
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:bdd_widget_test/defs.dart';
+
+class StepDefs {
+  @When("I see {} rich text")
+  void implementation() async {}
+}
 
 /// Example: When I see {'text'} rich text
 Future<void> iSeeRichText(

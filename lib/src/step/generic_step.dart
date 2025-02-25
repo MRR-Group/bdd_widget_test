@@ -23,6 +23,12 @@ class GenericStep implements BddStep {
       '${hasDataTable ? "import 'package:bdd_widget_test/data_table.dart' as bdd;\n" : ''}'
       '''
 import 'package:flutter_test/flutter_test.dart';
+import 'package:bdd_widget_test/defs.dart';
+
+class StepDefs {
+  @Then('$rawLine')
+  void implementation() async {}
+}
 
 /// Usage: $rawLine
 Future<void> $methodName($testerType $customTesterName${_getMethodParameters(rawLine, hasDataTable)}) async {
