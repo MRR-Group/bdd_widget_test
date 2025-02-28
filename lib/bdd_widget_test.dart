@@ -26,12 +26,14 @@ class FeatureBuilder implements Builder {
     final contents = await buildStep.readAsString(inputId);
 
     final featureDir = p.dirname(inputId.path);
+    final generatedDir = p.join(featureDir, 'generated');
+
     final isIntegrationTest =
         inputId.pathSegments.contains('integration_test') &&
             _hasIntegrationTestDevDependency();
 
     final feature = FeatureFile(
-      featureDir: featureDir,
+      featureDir: generatedDir,
       package: inputId.package,
       existingSteps: getExistingStepSubfolders(featureDir, options),
       input: contents,
@@ -42,8 +44,11 @@ class FeatureBuilder implements Builder {
     );
 
     final featureDart = inputId.changeExtension('_test.dart');
+    final fileName = p.basename(featureDart.path);
+    final assetId = AssetId(inputId.package, '$generatedDir/$fileName');
+
     await buildStep.writeAsString(
-      featureDart,
+      assetId,
       formatDartCode(feature.dartContent),
     );
 
@@ -91,6 +96,6 @@ class FeatureBuilder implements Builder {
 
   @override
   final buildExtensions = const {
-    '.feature': ['_test.dart'],
+    'test/{{}}.feature': ['test/generated/{{}}_test.dart'],
   };
 }

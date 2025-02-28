@@ -5,8 +5,8 @@ import 'package:yaml/yaml.dart';
 const _defaultTestMethodName = 'testWidgets';
 const _defaultTesterType = 'WidgetTester';
 const _defaultTesterName = 'tester';
-const _stepFolderName = './step';
-const _hookFolderName = './hook';
+const _stepFolderName = '../step';
+const _hookFolderName = '../hook';
 
 class GeneratorOptions {
   const GeneratorOptions({

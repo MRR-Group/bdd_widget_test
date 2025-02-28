@@ -1,61 +1,61 @@
-class Hook {
-  final String? tag;
-  final int? order; // lowest -> highest
+class Hook { // lowest -> highest
   const Hook({this.tag, this.order});
+  final String? tag;
+  final int? order;
 }
 
 class Before extends Hook {
-  const Before({String? tag, int? order}) : super(tag: tag, order: order);
+  const Before({super.tag, super.order});
 }
 
 class After extends Hook {
-  const After({String? tag, int? order}) : super(tag: tag, order: order);
+  const After({super.tag, super.order});
 }
 
 class BeforeStep extends Hook {
-  const BeforeStep({String? tag, int? order}) : super(tag: tag, order: order);
+  const BeforeStep({super.tag, super.order});
 }
 
 class AfterStep extends Hook {
-  const AfterStep({String? tag, int? order}) : super(tag: tag, order: order);
+  const AfterStep({super.tag, super.order});
 }
 
 // only available on given instances
 class BeforeRun {
-  final int? order;
 
   const BeforeRun({this.order});
+  final int? order;
 }
 
 // only available on given instances
 class AfterRun {
-  final int? order;
 
   const AfterRun({this.order});
+  final int? order;
 }
 
 class StepDef {
-  final String verbiage;
 
   const StepDef(this.verbiage);
+  final String verbiage;
 }
 
 class Given extends StepDef {
-  const Given(String verbiage) : super(verbiage);
+  const Given(super.verbiage);
 }
 
 class And extends StepDef {
-  const And(String verbiage) : super(verbiage);
+  const And(super.verbiage);
 }
 
 class But extends StepDef {
-  const But(String verbiage) : super(verbiage);
+  const But(super.verbiage);
 }
 
 class When extends StepDef {
-  const When(String verbiage) : super(verbiage);
+  const When(super.verbiage);
 }
 
 class Then extends StepDef {
-  const Then(String verbiage) : super(verbiage);
+  const Then(super.verbiage);
 }
