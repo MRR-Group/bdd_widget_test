@@ -26,7 +26,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:bdd_widget_test/defs.dart';
 
 class StepDefinition {
-  @Then('$rawLine')
+  @Then("$rawLine")
   void definition() async {}
 }
 
